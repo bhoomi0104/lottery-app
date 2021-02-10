@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_padding">10dp</dimen>
+
+    <dimen name="default_half_padding">5dp</dimen>
+    <dimen name="default_double_padding">20dp</dimen>
+    <dimen name="default_xdouble_padding">40dp</dimen>
+
+    <dimen name="default_margin">10dp</dimen>
+    <dimen name="default_double_margin">20dp</dimen>
+    <dimen name="default_xdouble_margin">40dp</dimen>
+    <dimen name="default_xxdouble_margin">50dp</dimen>
+
+    <dimen name="text_xxx_large">30sp</dimen>
+    <dimen name="text_xx_large">25sp</dimen>
+
+    <dimen name="text_x_large">20sp</dimen>
+    <dimen name="text_large">18sp</dimen>
+    <dimen name="text_medium">16sp</dimen>
+    <dimen name="text_default">14sp</dimen>
+    <dimen name="text_small">12sp</dimen>
+    <dimen name="default_half_margin">5dp</dimen>
+    <dimen name="default_xhalf_margin">2.5dp</dimen>
+
+</resources>
