@@ -18,25 +18,35 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/default_margin"
-                android:background="@color/colorPrimaryDark"
-                android:padding="@dimen/default_padding">
+                android:background="@color/colorPrimaryDark">
 
                 <TextView
                     android:id="@+id/tv_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
                     android:drawablePadding="@dimen/default_padding"
+                    android:paddingHorizontal="@dimen/default_padding"
                     android:text="Bhoomi"
                     android:textColor="@android:color/white"
                     android:textSize="@dimen/text_medium"
                     app:drawableStartCompat="@drawable/ic_account_circle_24" />
 
+                <Button
+                    android:id="@+id/btn_deposit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Deposit 1$"
+
+                    app:backgroundTint="@android:color/black" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
                     android:layout_toStartOf="@id/tv_balance"
                     android:layout_toLeftOf="@id/tv_balance"
-                    android:paddingHorizontal="@dimen/default_half_margin"
                     android:text="Balance:"
                     android:textColor="@android:color/white" />
 
@@ -46,6 +56,8 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingEnd="@dimen/default_padding"
                     android:text="$5"
                     android:textColor="@android:color/white"
                     android:textStyle="bold" />
@@ -168,34 +180,35 @@
                     android:layout_width="200dp"
                     android:layout_height="200dp"
                     android:layout_marginHorizontal="@dimen/default_double_margin"
-
-                    android:src="@drawable/color_wheel" />
+                    android:src="@drawable/wheel" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center">
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <ImageView
-                        android:src="@drawable/ic_arrow_upward_24"
+                        android:id="@+id/image_arrow"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:contentDescription="@string/arrow" />
+                        android:contentDescription="@string/arrow"
+                        android:src="@drawable/ic_arrow_upward_24" />
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recyclerview"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    tools:itemCount="5"
-                    tools:listitem="@layout/item_name" />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center"
+                        tools:itemCount="5"
+                        tools:listitem="@layout/item_name" />
 
 
                     <ImageView
-                        android:src="@drawable/ic_arrow_upward_24"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:contentDescription="@string/arrow" />
+                        android:contentDescription="@string/arrow"
+                        android:src="@drawable/ic_arrow_upward_24" />
 
                 </LinearLayout>
             </LinearLayout>
@@ -221,37 +234,42 @@
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/text_large" />
 
+            <!--
 
-            <ir.beigirad.zigzagview.ZigzagView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                        <ir.beigirad.zigzagview.ZigzagView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="@dimen/default_padding"
+                            app:zigzagBackgroundColor="@color/colorPrimary"
+                            app:zigzagElevation="8dp"
+                            app:zigzagHeight="10dp"
+                            app:zigzagPaddingContent="16dp"
+                            app:zigzagShadowAlpha="0.9"
+                            app:zigzagSides="top|bottom|right|left">
+            -->
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="120dp"
+                android:gravity="center"
                 android:layout_gravity="center"
-                android:padding="@dimen/default_padding"
-                app:zigzagBackgroundColor="@color/colorPrimary"
-                app:zigzagElevation="8dp"
-                app:zigzagHeight="10dp"
-                app:zigzagPaddingContent="16dp"
-                app:zigzagShadowAlpha="0.9"
-                app:zigzagSides="top|bottom|right|left">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/algerian_regular"
-                    android:text="Winner"
-                    android:textColor="@android:color/black"
-                    android:textSize="@dimen/text_xxx_large" />
-            </ir.beigirad.zigzagview.ZigzagView>
+                android:background="@drawable/boom"
+                android:fontFamily="@font/algerian_regular"
+                android:text="Winner"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_xxx_large" />
+            <!--            </ir.beigirad.zigzagview.ZigzagView>-->
 
             <TextView
                 android:id="@+id/tv_winner"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:fontFamily="@font/algerian_regular"
                 android:gravity="center"
-                android:text="Bhoomi"
 
-                android:layout_gravity="center"
+                android:text="Bhoomi"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/text_xxx_large" />
         </LinearLayout>

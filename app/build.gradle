@@ -40,7 +40,9 @@ dependencies {
     //zig zag
 //    implementation 'com.github.beigirad:ZigzagView:1.2.0'
 
-    implementation 'com.github.beigirad:ZigzagView:1.2.0'
+
+implementation 'com.paypal.sdk:paypal-android-sdk:2.15.3'
+//    implementation 'com.github.beigirad:ZigzagView:1.2.0'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
