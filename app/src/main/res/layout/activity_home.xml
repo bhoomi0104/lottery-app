@@ -1,14 +1,263 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/default_margin"
+                android:background="@color/colorPrimaryDark"
+                android:padding="@dimen/default_padding">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/default_padding"
+                    android:text="Bhoomi"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_medium"
+                    app:drawableStartCompat="@drawable/ic_account_circle_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@id/tv_balance"
+                    android:layout_toLeftOf="@id/tv_balance"
+                    android:paddingHorizontal="@dimen/default_half_margin"
+                    android:text="Balance:"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/tv_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:text="$5"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Next lottery in"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_large" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/default_double_margin"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_hr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/digi"
+                        android:text="14"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_xxx_large" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Hr"
+                        android:textAllCaps="true" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/default_margin"
+                    android:fontFamily="@font/digi"
+                    android:gravity="top"
+                    android:text=":"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_xxx_large" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_min"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/digi"
+                        android:text="55"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_xxx_large" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Min"
+                        android:textAllCaps="true" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/default_margin"
+                    android:fontFamily="@font/digi"
+                    android:gravity="top"
+                    android:text=":"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_xxx_large" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_sec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/digi"
+                        android:text="14"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_xxx_large" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Sec"
+                        android:textAllCaps="true" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/default_margin"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/color_wheel"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_marginHorizontal="@dimen/default_double_margin"
+
+                    android:src="@drawable/color_wheel" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:src="@drawable/ic_arrow_upward_24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/arrow" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:itemCount="5"
+                    tools:listitem="@layout/item_name" />
+
+
+                    <ImageView
+                        android:src="@drawable/ic_arrow_upward_24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/arrow" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/suez_one"
+                android:gravity="center_horizontal"
+                android:text="Wining Price $200"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_large" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/default_double_margin"
+                android:fontFamily="@font/suez_one"
+                android:gravity="center_horizontal"
+                android:text="Participants: 50"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_large" />
+
+
+            <ir.beigirad.zigzagview.ZigzagView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/default_padding"
+                app:zigzagBackgroundColor="@color/colorPrimary"
+                app:zigzagElevation="8dp"
+                app:zigzagHeight="10dp"
+                app:zigzagPaddingContent="16dp"
+                app:zigzagShadowAlpha="0.9"
+                app:zigzagSides="top|bottom|right|left">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/algerian_regular"
+                    android:text="Winner"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_xxx_large" />
+            </ir.beigirad.zigzagview.ZigzagView>
+
+            <TextView
+                android:id="@+id/tv_winner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/algerian_regular"
+                android:gravity="center"
+                android:text="Bhoomi"
+
+                android:layout_gravity="center"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_xxx_large" />
+        </LinearLayout>
+
+
+        <!--<LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -38,32 +287,47 @@
                         android:textSize="@dimen/text_large"
                         android:textStyle="bold" />
 
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:clipToPadding="true"
-                        app:cardBackgroundColor="@android:color/white"
-                        app:cardCornerRadius="10dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
-
-                        <TextView
-                            android:layout_width="match_parent"
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:gravity="start"
-                            android:padding="@dimen/default_padding"
-                            android:text="$ 567.00"
-                            android:textColor="@android:color/black"
-                            android:textSize="@dimen/text_large"
-                            android:textStyle="bold" />
-                    </androidx.cardview.widget.CardView>
+                            android:clipToPadding="true"
+                            app:cardBackgroundColor="@android:color/white"
+                            app:cardCornerRadius="10dp">
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:padding="@dimen/default_padding"
+                                android:text="$ 567.00"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/text_large"
+                                android:textStyle="bold" />
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <Button
+                            android:id="@+id/btn_deposit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:text="Deposit" />
+                    </RelativeLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="10dp"
-                android:layout_marginBottom="@dimen/default_margin">
+                android:layout_marginBottom="@dimen/default_margin"
+                app:cardCornerRadius="10dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -78,6 +342,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="14 : 55 : 66"
+                        android:textColor="@android:color/black"
                         android:textSize="@dimen/text_xxx_large" />
 
                     <TextView
@@ -92,8 +357,8 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="10dp"
-                android:layout_marginBottom="@dimen/default_margin">
+                android:layout_marginBottom="@dimen/default_margin"
+                app:cardCornerRadius="10dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -101,14 +366,16 @@
                     android:background="@drawable/outline"
                     android:orientation="vertical"
                     android:padding="@dimen/default_margin">
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="100"
-                        android:textStyle="bold"
                         android:textColor="@android:color/black"
-                        android:textSize="@dimen/text_x_large" />
+                        android:textSize="@dimen/text_x_large"
+                        android:textStyle="bold" />
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -120,6 +387,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/default_margin"
                 app:cardCornerRadius="10dp">
 
                 <LinearLayout
@@ -128,14 +396,16 @@
                     android:background="@drawable/outline"
                     android:orientation="vertical"
                     android:padding="@dimen/default_margin">
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="$ 123"
-                        android:textStyle="bold"
                         android:textColor="@android:color/black"
-                        android:textSize="@dimen/text_x_large" />
+                        android:textSize="@dimen/text_x_large"
+                        android:textStyle="bold" />
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -144,7 +414,19 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-        </LinearLayout>
-    </RelativeLayout>
+            &lt;!&ndash;     <ImageView
+                     android:layout_gravity="center"
+                     android:src="@drawable/color_wheel"
+                     android:id="@+id/color_wheel"
+                     android:layout_width="150dp"
+                     android:layout_height="150dp"/>&ndash;&gt;
+        </LinearLayout>-->
+    </ScrollView>
 
-</ScrollView>
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

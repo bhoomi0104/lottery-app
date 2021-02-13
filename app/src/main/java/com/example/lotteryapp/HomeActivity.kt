@@ -1,7 +1,9 @@
 package com.example.lotteryapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
 import com.example.lotteryapp.databinding.ActivityHomeBinding
 import java.text.DecimalFormat
@@ -20,6 +22,14 @@ class HomeActivity : AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+       /* binding.btnDeposit.setOnClickListener {
+            val intent= Intent(this,DepositActivity::class.java)
+            startActivity(intent)
+
+        }*/
+
+
+        binding.colorWheel.startAnimation(AnimationUtils.loadAnimation(applicationContext,R.anim.rotation))
         val formatter = SimpleDateFormat("dd.MM.yyyy, HH:mm")
         val then = "20.02.2018, 14:00" //Timer date 2
 
@@ -44,7 +54,7 @@ class HomeActivity : AppCompatActivity() {
 
                 val sec: Long = (millisUntilFinished / 1000) % 60;
 
-                binding.tvCountdown.text=f.format(hour)+" : "+f.format(min)+" : "+f.format(sec)
+                //binding.tvCountdown.text=f.format(hour)+" : "+f.format(min)+" : "+f.format(sec)
                 /*binding.tvCountdown.setText(
                     "" + String.format(
                         "%d - %d - %d",

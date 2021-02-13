@@ -17,8 +17,7 @@ class LoginActivity : AppCompatActivity() {
         binding.btnLogin.setOnClickListener {
             val intent = Intent(this, HomeActivity::class.java)
             intent.apply {
-                flags = Intent.FLAG_ACTIVITY_CLEAR_TASK
-                flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+                flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
             }
             startActivity(intent)
             finish()
@@ -26,10 +25,6 @@ class LoginActivity : AppCompatActivity() {
 
         binding.tvSignup.setOnClickListener {
             val intent = Intent(this, SignupActivity::class.java)
-            intent.apply {
-                flags = Intent.FLAG_ACTIVITY_CLEAR_TASK
-                flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
-            }
             startActivity(intent)
             finish()
         }

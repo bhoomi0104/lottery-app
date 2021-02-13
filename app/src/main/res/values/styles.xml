@@ -8,8 +8,8 @@
     </style>
 
     <style name="OutlinedTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
-        <item name="boxStrokeColor">@color/colorPrimary</item>
-        <item name="boxStrokeWidth">10dp</item>
+
+
     </style>
 
     <!--Customize Borderless TextInputLayout-->
@@ -31,6 +31,6 @@
     </style>
     <style name="MyShapeAppearance">
         <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">10dp</item>
+        <item name="cornerSize">15dp</item>
     </style>
 </resources>
