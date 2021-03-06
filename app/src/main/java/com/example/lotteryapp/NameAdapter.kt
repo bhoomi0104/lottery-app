@@ -1,5 +1,6 @@
 package com.example.lotteryapp
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,11 +17,21 @@ class NameAdapter(private val nameList: List<String>) :
     }
 
     override fun getItemCount(): Int {
-        return if (nameList == null) 0 else Int.MAX_VALUE
+        if (nameList == null) {
+            Log.d("hey", "repeat null")
+
+            return 0
+        } else {
+            Log.d("hey", "repeat")
+            return Int.MAX_VALUE
+        }
 
     }
+
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.tvName.setText(nameList.get(position % nameList.size))
+        if (nameList.isNotEmpty())
+            holder.tvName.text = nameList.get(position % nameList.size)
+
     }
 
     class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {

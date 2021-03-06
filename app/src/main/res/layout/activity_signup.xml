@@ -166,6 +166,6 @@
 
     </ScrollView>
 
-    <include layout="@layout/layout_progressbar" />
+    <include layout="@layout/layout_progressbar" android:id="@+id/layoutProgressBar" />
 </RelativeLayout>
 

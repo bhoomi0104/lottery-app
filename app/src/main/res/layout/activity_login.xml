@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:clickable="true"
-    android:focusable="true">
+    android:focusable="true"
+    android:orientation="vertical">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -47,10 +47,10 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="40dp"
+                    android:gravity="center"
                     android:text="Lottery App"
-                    android:textSize="@dimen/text_x_large"
                     android:textColor="@android:color/white"
-                    android:gravity="center"/>
+                    android:textSize="@dimen/text_x_large" />
 
 
                 <androidx.cardview.widget.CardView
@@ -73,68 +73,69 @@
 
                         <TextView
                             android:layout_width="wrap_content"
-                            android:textStyle="bold"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="center"
                             android:layout_marginTop="10dp"
                             android:layout_marginBottom="@dimen/default_double_margin"
                             android:text="Login"
                             android:textColor="@color/colorPrimary"
-                            android:layout_gravity="center"
-                            android:textSize="@dimen/text_large" />
+                            android:textSize="@dimen/text_large"
+                            android:textStyle="bold" />
 
                         <com.google.android.material.textfield.TextInputLayout
-                            android:id="@+id/inputlayout_mobile"
-                            app:boxBackgroundColor="@android:color/transparent"
+                            android:id="@+id/inputlayout_username"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="@dimen/default_double_margin"
-                            >
+                            app:boxBackgroundColor="@android:color/transparent">
 
                             <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/input_mobile"
+                                android:id="@+id/input_username"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="Username"
-                                android:maxLines="1"
-                                android:imeOptions="actionNext"/>
+                                android:imeOptions="actionNext"
+                                android:maxLines="1" />
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <com.google.android.material.textfield.TextInputLayout
                             android:id="@+id/inputlayout_password"
                             android:layout_width="match_parent"
-                            app:boxBackgroundColor="@android:color/transparent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="@dimen/default_double_margin"
-                            app:passwordToggleEnabled="true">
+                            app:boxBackgroundColor="@android:color/transparent"
+                            app:endIconMode="password_toggle">
 
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/input_password"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="Password"
-                                android:maxLines="1"
-                                android:imeOptions="actionDone"/>
+                                android:imeOptions="actionDone"
+                                android:maxLines="1" />
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <TextView
                             android:layout_width="wrap_content"
-                            android:paddingHorizontal="@dimen/default_padding"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
+                            android:paddingHorizontal="@dimen/default_padding"
                             android:text="Don't have an account?" />
+
                         <TextView
                             android:id="@+id/tv_signup"
                             android:layout_width="wrap_content"
-                            android:paddingHorizontal="@dimen/default_padding"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="@dimen/default_margin"
+                            android:paddingHorizontal="@dimen/default_padding"
                             android:text="Sign up here"
-                            android:textColor="@color/colorPrimaryDark"
-                            android:layout_marginBottom="@dimen/default_margin"/>
+                            android:textColor="@color/colorPrimaryDark" />
+
                         <Button
                             android:id="@+id/btn_login"
-                            android:layout_width="wrap_content"
                             style="@style/RoundedCornerButton"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
 
@@ -151,6 +152,6 @@
 
     </ScrollView>
 
-    <include layout="@layout/layout_progressbar" />
+    <include layout="@layout/layout_progressbar"  android:id="@+id/layoutProgressBar"/>
 </RelativeLayout>
 

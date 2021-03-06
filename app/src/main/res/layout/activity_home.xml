@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -58,6 +59,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:paddingEnd="@dimen/default_padding"
+                    android:paddingRight="@dimen/default_padding"
                     android:text="$5"
                     android:textColor="@android:color/white"
                     android:textStyle="bold" />
@@ -89,7 +91,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/digi"
-                        android:text="14"
                         android:textColor="@android:color/black"
                         android:textSize="@dimen/text_xxx_large" />
 
@@ -122,7 +123,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/digi"
-                        android:text="55"
                         android:textColor="@android:color/black"
                         android:textSize="@dimen/text_xxx_large" />
 
@@ -155,7 +155,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/digi"
-                        android:text="14"
                         android:textColor="@android:color/black"
                         android:textSize="@dimen/text_xxx_large" />
 
@@ -193,13 +192,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:contentDescription="@string/arrow"
-                        android:src="@drawable/ic_arrow_upward_24" />
+                        android:src="@drawable/arrow" />
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/recyclerView"
                         android:layout_width="wrap_content"
                         android:layout_height="150dp"
                         android:layout_gravity="center"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                         tools:itemCount="5"
                         tools:listitem="@layout/item_name" />
 
@@ -208,7 +208,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:contentDescription="@string/arrow"
-                        android:src="@drawable/ic_arrow_upward_24" />
+                        android:src="@drawable/arrow" />
 
                 </LinearLayout>
             </LinearLayout>
@@ -251,14 +251,14 @@
 
             <TextView
                 android:layout_width="200dp"
-                android:layout_height="120dp"
-                android:gravity="center"
+                android:layout_height="100dp"
                 android:layout_gravity="center"
                 android:background="@drawable/boom"
                 android:fontFamily="@font/algerian_regular"
+                android:gravity="center"
                 android:text="Winner"
                 android:textColor="@android:color/black"
-                android:textSize="@dimen/text_xxx_large" />
+                android:textSize="@dimen/text_xx_large" />
             <!--            </ir.beigirad.zigzagview.ZigzagView>-->
 
             <TextView
@@ -273,178 +273,178 @@
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/text_xxx_large" />
         </LinearLayout>
-
-
-        <!--<LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="@dimen/default_margin">
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/default_double_margin"
-                android:clipToPadding="true"
-                app:cardBackgroundColor="@color/colorAccent"
-                app:cardCornerRadius="10dp"
-                app:contentPadding="@dimen/default_double_padding">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/default_double_margin"
-                        android:gravity="start"
-                        android:text="Hello, Bhoomi"
-                        android:textColor="@android:color/black"
-                        android:textSize="@dimen/text_large"
-                        android:textStyle="bold" />
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-                        <androidx.cardview.widget.CardView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:clipToPadding="true"
-                            app:cardBackgroundColor="@android:color/white"
-                            app:cardCornerRadius="10dp">
-
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:gravity="start"
-                                android:padding="@dimen/default_padding"
-                                android:text="$ 567.00"
-                                android:textColor="@android:color/black"
-                                android:textSize="@dimen/text_large"
-                                android:textStyle="bold" />
-
-
-                        </androidx.cardview.widget.CardView>
-
-                        <Button
-                            android:id="@+id/btn_deposit"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentEnd="true"
-                            android:layout_alignParentRight="true"
-                            android:text="Deposit" />
-                    </RelativeLayout>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/default_margin"
-                app:cardCornerRadius="10dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/outline"
-                    android:orientation="vertical"
-                    android:padding="@dimen/default_margin">
-
-                    <TextView
-                        android:id="@+id/tv_countdown"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="14 : 55 : 66"
-                        android:textColor="@android:color/black"
-                        android:textSize="@dimen/text_xxx_large" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="H : M : S"
-                        android:textSize="@dimen/text_medium" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/default_margin"
-                app:cardCornerRadius="10dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/outline"
-                    android:orientation="vertical"
-                    android:padding="@dimen/default_margin">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="100"
-                        android:textColor="@android:color/black"
-                        android:textSize="@dimen/text_x_large"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="Participants" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/default_margin"
-                app:cardCornerRadius="10dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/outline"
-                    android:orientation="vertical"
-                    android:padding="@dimen/default_margin">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="$ 123"
-                        android:textColor="@android:color/black"
-                        android:textSize="@dimen/text_x_large"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="Amount" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            &lt;!&ndash;     <ImageView
-                     android:layout_gravity="center"
-                     android:src="@drawable/color_wheel"
-                     android:id="@+id/color_wheel"
-                     android:layout_width="150dp"
-                     android:layout_height="150dp"/>&ndash;&gt;
-        </LinearLayout>-->
     </ScrollView>
 
-    <ProgressBar
-        android:layout_width="wrap_content"
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:visibility="gone" />
+        android:orientation="vertical"
+        android:padding="@dimen/default_margin">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/default_double_margin"
+            android:clipToPadding="true"
+            app:cardBackgroundColor="@color/colorAccent"
+            app:cardCornerRadius="10dp"
+            app:contentPadding="@dimen/default_double_padding">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/default_double_margin"
+                    android:gravity="start"
+                    android:text="Hello, Bhoomi"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_large"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="true"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardCornerRadius="10dp">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:padding="@dimen/default_padding"
+                            android:text="$ 567.00"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/text_large"
+                            android:textStyle="bold" />
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <Button
+                        android:id="@+id/btn_deposit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:text="Deposit" />
+                </RelativeLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/default_margin"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/outline"
+                android:orientation="vertical"
+                android:padding="@dimen/default_margin">
+
+                <TextView
+                    android:id="@+id/tv_countdown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="14 : 55 : 66"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_xxx_large" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="H : M : S"
+                    android:textSize="@dimen/text_medium" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/default_margin"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/outline"
+                android:orientation="vertical"
+                android:padding="@dimen/default_margin">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="100"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_x_large"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Participants" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/default_margin"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/outline"
+                android:orientation="vertical"
+                android:padding="@dimen/default_margin">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="$ 123"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_x_large"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Amount" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        &lt;!&ndash;     <ImageView
+                 android:layout_gravity="center"
+                 android:src="@drawable/color_wheel"
+                 android:id="@+id/color_wheel"
+                 android:layout_width="150dp"
+                 android:layout_height="150dp"/>&ndash;&gt;
+    </LinearLayout>-->
+
+
+    <include
+        android:id="@+id/layoutProgressBar"
+        layout="@layout/layout_progressbar" />
+
 
 </RelativeLayout>
